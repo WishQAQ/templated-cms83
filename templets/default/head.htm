@@ -1,0 +1,33 @@
+<div class="headbj">
+  <div class="head_mid">
+    <div class="logo"><a href="/" title=""><img src="/skin/images/logo.png" alt="{dede:global.cfg_webname/}" width="283" height="56" style="margin-top:27px;"/></a></div>
+    <div class="menu">
+      <div class="tel"><img src="/skin/images/tel.jpg" alt="{dede:global.cfg_webname/}" width="221" height="69" /></div>
+      <div class="nav">
+        <div class="navleft"> <a href="/"  title="首页"></a> </div>
+        <div class="navright">
+          <div id="mainnavbox">
+            <ul id="mainnav" name="mainnav">
+              {dede:channelartlist typeid='top' currentstyle='current'}
+              <li class="menu2" onmouseover="this.className=&#39;menu1&#39;" onmouseout="this.className=&#39;menu2&#39;"> <span> <a class="{dede:field.currentstyle/}" href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}">{dede:field name='typename'/}</a></span>
+                <div class="list">
+                  <div class="listt"> {dede:channel type='son' noself='yes'} <a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a> {/dede:channel} </div>
+                </div>
+              </li>
+              {/dede:channelartlist}
+            </ul>
+          </div>
+        </div>
+        <!--<ul>
+          <li> 首    页</li>
+          <li> <a href="#" title="关于我们">关于我们</a></li>
+          <li> <a href="#">经营项目</a></li>
+          <li> <a href="#" title="新闻资讯">新闻资讯</a></li>
+          <li> <a href="#" title="联系我们">联系我们</a></li>
+          <li> <a href="#" title="合作伙伴">合作伙伴</a></li>
+          <li> <a class="current" href="#">人才招聘</a></li>
+        </ul>--> 
+      </div>
+    </div>
+  </div>
+</div>

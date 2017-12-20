@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<LINK href="/skin/css/base.css" rel=stylesheet>
+<LINK href="/skin/css/style.css" rel=stylesheet>
+<LINK href="/skin/css/jbox.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/nf_jquery-1.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/nf_home.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/liscroll.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/functions.js"></script>
+<script language="JavaScript" type="text/javascript" src="/skin/js/jquery.jbox-2.3.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="nybanner" style="background:url(/skin/images/20150515102410-98503343854099520.jpg) no-repeat top center"></div>
+<div class="contentny">
+  <div class="leftcc">
+    <div class="leftcc_top">{dede:field name='typeid' function="GetTopTypename(@me)"/}</div>
+    <div class="leftcc_bt">
+      <ul>
+        {dede:channel type='son' currentstyle="
+        <li><a href='~typelink~' class='cu'>~typename~</a></li>
+        "}
+        <li><a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+    </div>
+    <div class="ccleft">
+      <div class="qq"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=698533173&amp;site=qq&amp;menu=yes" target="_blank" title="客服1"><img src="/skin/images/q.jpg" width="22" height="25" /></a>&nbsp;</div>
+      <div class="contact_bt_tita">13865980228 400-088-9977</div>
+      <div class="contact_bt_bta"> 传真：0898-88123008<br />
+        E-mail：admin@dedecms.com</div>
+    </div>
+  </div>
+  <div class="xianright">
+    <div class="xianright_top">
+      <div class="xianright_top_right">您的位置：{dede:field name='position'/}</div>
+    </div>
+    <div class="coo">
+      <ul>
+        {dede:list pagesize='5'}
+        <li>
+          <div class="imger"><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" class="PicAuto" alt="[field:title/]" width="224" height="83" /></a></div>
+          <div class="chawr">
+            <h4><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a>
+              <div class="c"></div>
+            </h4>
+            <h6> <em><a href="[field:arcurl/]" title="更多"><img src="/skin/images/gaa.jpg" alt="更多" width="62" height="24" /></a></em> <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></h6>
+          </div>
+          <div class="c"></div>
+        </li>
+        {/dede:list}
+      </ul>
+      <div class="inPagination">{dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/} </div>
+    </div>
+    <div class="c"></div>
+  </div>
+  <div class="c"></div>
+</div>
+<div class="c"></div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
